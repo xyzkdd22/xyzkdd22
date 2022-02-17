@@ -86,7 +86,7 @@ class MoCoV3(nn.Module):
             k2 = nn.functional.normalize(k2, dim=1)
         
         h_i = self.classifier_q(self.encoder_q(x1).view(x1.size(0), -1))
-        h_j = self.classifier_q(self.encoder_q(x2).view(x2.size(0), -1))
+        h_j = self.classifier_k(self.encoder_q(x2).view(x2.size(0), -1))
 
         return q1, q2, k1, k2, h_i, h_j
 
