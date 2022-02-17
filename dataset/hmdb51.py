@@ -71,6 +71,6 @@ def detect_anomaly_clips(video_dir, dest_dir):
     print('{} videos are above the threshold.'.format(str(j)))
 
 if __name__ == '__main__':
-    split_path = "/media/ican/XxX/Datasets/HMDB51/splitted/test10"
+    split_path = "../HMDB51/splitted/test10"
     split_csv_file = "test10split01.csv"
     generate_hmdb51_video_list(split_path, split_csv_file)
